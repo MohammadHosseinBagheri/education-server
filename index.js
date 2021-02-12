@@ -6,9 +6,9 @@ const port = process.env.PORT || 3000;
 const routes = require("./src/routes");
 
 //initial middlewares
-app.get('/',(req,res)=>{
-  res.send("heroku app")
-})
+app.get("/", (req, res) => {
+  res.send("heroku app");
+});
 app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
@@ -16,7 +16,22 @@ app.use(
   })
 );
 //initial db
-mongoose.connect("mongodb://localhost/osoul");
+const connectionParams = {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
+};
+mongoose
+  .connect(
+    "mongodb+srv://sir_gray:Nx4xWmAEshg8975@cluster0.sb9hn.mongodb.net/osoul?retryWrites=true&w=majority",
+    connectionParams
+  )
+  .then(() => {
+    console.log("Connected to database ");
+  })
+  .catch((err) => {
+    console.error(`Error connecting to the database. \n${err}`);
+  });
 //initial routes
 app.use(routes);
 // initial app
