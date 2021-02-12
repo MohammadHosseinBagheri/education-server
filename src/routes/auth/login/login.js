@@ -10,7 +10,6 @@ router.post(
   // check("natinalCode").isLength({ min: 10, max: 10 }),
   // check("password").isLength({ min: 8 }),
   (req, res) => {
-    res.send(req.body)
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(422).json({ errors: errors.array() });
