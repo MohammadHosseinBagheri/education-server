@@ -1,5 +1,5 @@
 # apis
 ## login
-### sth
+### https://vast-springs-89977.herokuapp.com/login
 ## register
-### sth
+### https://vast-springs-89977.herokuapp.com/register
