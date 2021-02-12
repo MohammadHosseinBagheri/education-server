@@ -6,6 +6,9 @@ const port = process.env.PORT || 3000;
 const routes = require("./src/routes");
 
 //initial middlewares
+app.get('/',(req,res)=>{
+  res.send("heroku")
+})
 app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
