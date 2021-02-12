@@ -23,7 +23,7 @@ const connectionParams = {
 };
 mongoose
   .connect(
-    "mongodb+srv://sir_gray:Nx4xWmAEshg8975@cluster0.sb9hn.mongodb.net/osoul?retryWrites=true&w=majority",
+    "mongodb+srv://sir_gray:*********@cluster0.sb9hn.mongodb.net/********?retryWrites=true&w=majority",
     connectionParams
   )
   .then(() => {
