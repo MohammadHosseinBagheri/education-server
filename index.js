@@ -7,7 +7,7 @@ const routes = require("./src/routes");
 
 //initial middlewares
 app.get('/',(req,res)=>{
-  res.send("heroku")
+  res.send("heroku app")
 })
 app.use(bodyParser.json());
 app.use(
