@@ -30,6 +30,7 @@ router.post("/", (req, res) => {
           password,
           address,
           courses,
+          type
         });
         newStudent.save();
 
@@ -52,6 +53,7 @@ router.post("/", (req, res) => {
           password,
           address,
           courses,
+          type
         });
         newTeacher.save();
 
