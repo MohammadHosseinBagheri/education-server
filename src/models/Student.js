@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
 const StudentSchema = mongoose.Schema({
+  type: { type: String, required: true },
   name: { type: String, required: true },
   lastName: { type: String, required: true },
   nationalCode: { type: String, required: true, unique: true },
-//   birthday: { type: Date, required: true },
+  //   birthday: { type: Date, required: true },
   birthday: { type: String, required: true },
   phone: { type: String, required: true },
   password: { type: String, required: true },
